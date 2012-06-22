@@ -147,9 +147,9 @@
       if (options && options.stylesheets) {
         stylesheets = options.stylesheets;
       }
-
-      var editor = new wysi.Editor(this.el.attr('id'), {
-        toolbar: this.toolbar.attr('id'),
+     //Change following code so that editor may be creating before adding to DOM
+      var editor = new wysi.Editor(this.el.get(0), {
+        toolbar: this.toolbar.get(0),
         parserRules: parserRules,
         stylesheets: stylesheets
       });
